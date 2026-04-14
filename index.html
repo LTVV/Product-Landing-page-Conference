@@ -30,6 +30,11 @@
 </head>
 <body>
 
+    <!-- Top Promo Banner -->
+    <div class="promo-banner" style="background: var(--clr-primary); color: white; text-align: center; padding: 0.75rem 1rem; font-weight: 500; font-size: 0.9375rem; position: relative; z-index: 100;">
+        🎉 Special Offer: Use code <strong style="background: rgba(255,255,255,0.2); padding: 0.1rem 0.4rem; border-radius: 4px; margin: 0 0.25rem;">LAUNCH20</strong> for 20% off your purchase! Limited time only.
+    </div>
+
     <!-- Header -->
     <header class="header">
         <div class="container header__container">
@@ -196,7 +201,7 @@
                     <p style="color: var(--clr-muted); margin-bottom: 2rem;">"The high-converting pricing blocks and clean schedule design immediately boosted our conversions compared to our old site."</p>
                     <div style="display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--clr-border); padding-top: 1.5rem;">
                         <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--clr-bg-alt); display: flex; align-items: center; justify-content: center; font-weight: bold; overflow: hidden;">
-                            <img src="https://ui-avatars.com/api/?name=John+T&background=random" alt="John T" loading="lazy" width="48" height="48">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John T" loading="lazy" width="48" height="48" style="object-fit: cover;">
                         </div>
                         <div>
                             <div style="font-weight: 700; color: var(--clr-heading);">John T.</div>
@@ -211,7 +216,7 @@
                     <p style="color: var(--clr-muted); margin-bottom: 2rem;">"We used to spend 4-6 weeks custom coding our event pages. With this template, we imported, replaced text, and launched same-day."</p>
                     <div style="display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--clr-border); padding-top: 1.5rem;">
                         <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--clr-bg-alt); display: flex; align-items: center; justify-content: center; font-weight: bold; overflow: hidden;">
-                            <img src="https://ui-avatars.com/api/?name=Sarah+K&background=random" alt="Sarah K" loading="lazy" width="48" height="48">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah K" loading="lazy" width="48" height="48" style="object-fit: cover;">
                         </div>
                         <div>
                             <div style="font-weight: 700; color: var(--clr-heading);">Sarah K.</div>
@@ -226,7 +231,7 @@
                     <p style="color: var(--clr-muted); margin-bottom: 2rem;">"The pre-built Elementor components meant we didn't need to hire a freelance developer. It's incredibly intuitive and robust."</p>
                     <div style="display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--clr-border); padding-top: 1.5rem;">
                         <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--clr-bg-alt); display: flex; align-items: center; justify-content: center; font-weight: bold; overflow: hidden;">
-                            <img src="https://ui-avatars.com/api/?name=Maria+S&background=random" alt="Maria S" loading="lazy" width="48" height="48">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Maria S" loading="lazy" width="48" height="48" style="object-fit: cover;">
                         </div>
                         <div>
                             <div style="font-weight: 700; color: var(--clr-heading);">Maria S.</div>
@@ -255,27 +260,57 @@
                     <div class="testimonial-card" style="min-width: 100%; max-width: 400px; scroll-snap-align: center; flex-shrink: 0; display: flex; flex-direction: column;">
                         <div class="testimonial-card__stars">★★★★★</div>
                         <p class="testimonial-card__quote">"The easiest WordPress template I've ever used. The Elementor integration is flawless, and it took me less than an hour to set up my entire Marketing Summit website!"</p>
-                        <div class="testimonial-card__author" style="margin-top: auto;">- Alex D., Event Organizer</div>
+                        <div class="testimonial-card__author" style="margin-top: auto; display: flex; align-items: center; gap: 1rem;">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Alex D." style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <strong style="display: block; color: var(--clr-heading);">Alex D.</strong>
+                                <span style="font-size: 0.875rem;">Event Organizer</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="testimonial-card" style="min-width: 100%; max-width: 400px; scroll-snap-align: center; flex-shrink: 0; display: flex; flex-direction: column;">
                         <div class="testimonial-card__stars">★★★★★</div>
                         <p class="testimonial-card__quote">"I was struggling with code before. Thanks to Conference, I simply imported the demo, replaced the dummy text, and my webinar landing page was live."</p>
-                        <div class="testimonial-card__author" style="margin-top: auto;">- Maria S., Marketing Manager</div>
+                        <div class="testimonial-card__author" style="margin-top: auto; display: flex; align-items: center; gap: 1rem;">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Maria S." style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <strong style="display: block; color: var(--clr-heading);">Maria S.</strong>
+                                <span style="font-size: 0.875rem;">Marketing Manager</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="testimonial-card" style="min-width: 100%; max-width: 400px; scroll-snap-align: center; flex-shrink: 0; display: flex; flex-direction: column;">
                         <div class="testimonial-card__stars">★★★★★</div>
                         <p class="testimonial-card__quote">"Fantastic design out of the box! We saw a 30% increase in ticket sales merely because our site finally looked trustworthy and professional. Highly recommended."</p>
-                        <div class="testimonial-card__author" style="margin-top: auto;">- John T., Tech Meetup Lead</div>
+                        <div class="testimonial-card__author" style="margin-top: auto; display: flex; align-items: center; gap: 1rem;">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John T." style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <strong style="display: block; color: var(--clr-heading);">John T.</strong>
+                                <span style="font-size: 0.875rem;">Tech Meetup Lead</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="testimonial-card" style="min-width: 100%; max-width: 400px; scroll-snap-align: center; flex-shrink: 0; display: flex; flex-direction: column;">
                         <div class="testimonial-card__stars">★★★★★</div>
                         <p class="testimonial-card__quote">"The Elementor setup is so straightforward that my junior team member took over updating the schedule without any training. The layout itself is extremely smart."</p>
-                        <div class="testimonial-card__author" style="margin-top: auto;">- Sarah K., CEO at Horizon Events</div>
+                        <div class="testimonial-card__author" style="margin-top: auto; display: flex; align-items: center; gap: 1rem;">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah K." style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <strong style="display: block; color: var(--clr-heading);">Sarah K.</strong>
+                                <span style="font-size: 0.875rem;">CEO at Horizon Events</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="testimonial-card" style="min-width: 100%; max-width: 400px; scroll-snap-align: center; flex-shrink: 0; display: flex; flex-direction: column;">
                         <div class="testimonial-card__stars">★★★★★</div>
                         <p class="testimonial-card__quote">"Worth every penny. The included demo content alone saved us weeks of copywriting and structural planning. A true plug-and-play solution."</p>
-                        <div class="testimonial-card__author" style="margin-top: auto;">- David R., Freelance Developer</div>
+                        <div class="testimonial-card__author" style="margin-top: auto; display: flex; align-items: center; gap: 1rem;">
+                            <img src="https://randomuser.me/api/portraits/men/82.jpg" alt="David R." style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <strong style="display: block; color: var(--clr-heading);">David R.</strong>
+                                <span style="font-size: 0.875rem;">Freelance Developer</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <button onclick="document.getElementById('ts-slider').scrollBy({left: 400, behavior: 'smooth'})" style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--clr-border); background: var(--clr-white); color: var(--clr-heading); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); box-shadow: var(--shadow-sm);" onmouseover="this.style.background='var(--clr-bg-alt)';" onmouseout="this.style.background='var(--clr-white)';">&#8594;</button>
@@ -679,6 +714,10 @@
                 <div class="faq__item">
                     <h4 class="faq__q">Do I need coding experience?</h4>
                     <p class="faq__a">No! The template is built entirely with Elementor, a visual page builder for WordPress. You can customize any content using a simple drag-and-drop interface.</p>
+                </div>
+                <div class="faq__item">
+                    <h4 class="faq__q">Do I need Elementor Pro?</h4>
+                    <p class="faq__a">No, you do not need Elementor Pro! The entire template is fully compatible with the free version of Elementor. All sections and widgets shown in the demo are built using free Elementor features.</p>
                 </div>
                 <div class="faq__item">
                     <h4 class="faq__q">What happens immediately after purchase?</h4>

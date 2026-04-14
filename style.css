@@ -312,7 +312,7 @@ img {
 @media (min-width: 992px) {
     .hero__container {
         grid-template-columns: 1fr 1fr;
-        align-items: stretch;
+        align-items: center;
     }
 }
 
@@ -392,7 +392,7 @@ img {
     z-index: 2;
     transform: perspective(1000px) rotateY(-4deg) translateY(0);
     transition: var(--transition);
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
 }

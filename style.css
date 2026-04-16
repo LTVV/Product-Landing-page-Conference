@@ -52,7 +52,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 body {
@@ -61,7 +61,7 @@ body {
     background-color: var(--clr-bg);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 h1,

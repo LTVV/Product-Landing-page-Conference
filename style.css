@@ -602,9 +602,24 @@ img {
         margin-top: 1rem;
     }
 
+    /* Hero features strip — horizontal scroll on mobile */
     .hero__features-horizontal--left {
-        justify-content: flex-start;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;          /* Firefox */
+        -ms-overflow-style: none;       /* IE/Edge */
+        padding-bottom: 4px;            /* space for scroll bounce */
+        gap: 0.5rem 1.25rem;
+        font-size: 0.8125rem;
+    }
+
+    .hero__features-horizontal--left::-webkit-scrollbar {
+        display: none;                  /* Chrome/Safari */
+    }
+
+    .hero__features-horizontal--left > div {
+        flex-shrink: 0;
     }
 }
 

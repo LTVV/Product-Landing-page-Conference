@@ -6,14 +6,14 @@
     --clr-primary: #4f46e5;
     --clr-primary-hover: #4338ca;
     --clr-secondary: #0f172a;
-    
+
     --clr-bg: #ffffff;
     --clr-bg-alt: #f8fafc;
-    
+
     --clr-text: #334155;
     --clr-heading: #0f172a;
     --clr-muted: #64748b;
-    
+
     --clr-white: #ffffff;
     --clr-border: #e2e8f0;
 
@@ -26,7 +26,7 @@
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    
+
     /* Typography */
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -41,7 +41,9 @@
 /* ==========================================================================
    Reset & Base Styles
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -62,7 +64,12 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     color: var(--clr-heading);
     line-height: 1.2;
@@ -87,12 +94,99 @@ img {
 /* ==========================================================================
    Layout & Utilities
    ========================================================================== */
+
+/* Base container — no horizontal padding by default.
+   Each section controls its own mobile padding via .section-px or inline rules.
+   This prevents global padding from squeezing full-bleed blocks. */
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 1.5rem;
+    /* Desktop default — overridden per-section on mobile */
     width: 100%;
     box-sizing: border-box;
+}
+
+/* ─── Per-Section Mobile Padding Helper ────────────────────────────────────
+   Apply .section-px--tight / .section-px--normal / .section-px--wide
+   directly on .container inside a section to control mobile side padding.
+   Default .container keeps 1.5rem for most blocks (fine for most).
+   For sections where content feels too squeezed, use inline overrides below.
+*/
+@media (max-width: 767px) {
+
+    /* PROMO BANNER — full-bleed, no side padding needed */
+    .promo-banner .container {
+        padding: 0;
+    }
+
+    /* HEADER — standard padding */
+    /* .header .container — keep default 1.5rem */
+
+    /* HERO — standard padding */
+    /* .hero .container — keep default 1.5rem */
+
+    /* WHAT YOU GET — standard padding */
+    /* .what-you-get .container — keep default 1.5rem */
+
+    /* RESULT DRIVEN — standard padding */
+    /* .result-driven .container — keep default 1.5rem */
+
+    /* SOCIAL PROOF — standard padding */
+    /* .social-proof .container — keep default 1.5rem */
+
+    /* CASE STUDIES — standard padding */
+    /* .case-studies .container — keep default 1.5rem */
+
+    /* TESTIMONIALS — extra padding for slider arrows */
+    /* .testimonials .container — keep default 1.5rem */
+
+    /* VIEW LIVE DEMO — larger padding so CTA button breathes */
+    .demo-showcase-wrapper .container {
+        padding: 0 1.5rem;
+    }
+
+    /* COMPARISON TABLE — tight is fine, table adapts */
+    /* .comparison .container — keep default 1.5rem */
+
+    /* BENEFITS — standard padding */
+    /* .benefits .container — keep default 1.5rem */
+
+    /* FEATURES — standard padding */
+    /* .features .container — keep default 1.5rem */
+
+    /* USE CASES (tags) — standard padding */
+    /* .use-cases .container — keep default 1.5rem */
+
+    /* SCREENSHOTS — standard padding */
+    /* .screenshots .container — keep default 1.5rem */
+
+    /* VIDEO SHOWCASE — standard padding */
+    /* .video-showcase .container — keep default 1.5rem */
+
+    /* HOW IT WORKS — standard padding */
+    /* .steps .container — keep default 1.5rem */
+
+    /* WHAT'S INCLUDED — standard padding */
+    /* .whats-included .container — keep default 1.5rem */
+
+    /* COMPACT TRUST — standard padding */
+    /* .compact-trust .container — keep default 1.5rem */
+
+    /* PRICING — standard padding */
+    /* .pricing .container — keep default 1.5rem */
+
+    /* FAQ — standard padding */
+    /* .faq .container — keep default 1.5rem */
+
+    /* SEO TEXT — standard padding */
+    /* .seo-text .container — keep default 1.5rem */
+
+    /* FINAL CTA — standard padding */
+    /* .final-cta .container — keep default 1.5rem */
+
+    /* FOOTER — standard padding */
+    /* .footer .container — keep default 1.5rem */
 }
 
 .section-header {
@@ -102,7 +196,7 @@ img {
 }
 
 .section-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
 }
@@ -128,7 +222,8 @@ img {
     transition: var(--transition);
     border: none;
     text-align: center;
-    min-height: 44px; /* Ensured minimum tap target */
+    min-height: 44px;
+    /* Ensured minimum tap target */
 }
 
 .btn--primary {
@@ -181,7 +276,7 @@ img {
    Sections
    ========================================================================== */
 
-/* Header */
+/* Header — sticky so it stays visible while scrolling */
 .header {
     padding: 1.25rem 0;
     background-color: var(--clr-bg);
@@ -189,6 +284,7 @@ img {
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
 .header__container {
@@ -241,11 +337,19 @@ img {
 }
 
 @media (max-width: 767px) {
-    .header__container { position: relative; }
-    .header__hamburger { display: flex; }
+    .header__container {
+        position: relative;
+    }
+
+    .header__hamburger {
+        display: flex;
+    }
+
     .header__nav {
         position: absolute;
-        top: 100%; left: 0; right: 0;
+        top: 100%;
+        left: 0;
+        right: 0;
         background: var(--clr-white);
         flex-direction: column;
         padding: 2rem;
@@ -254,11 +358,19 @@ img {
         gap: 1.5rem;
         border-bottom: 1px solid var(--clr-border);
     }
+
     .header__nav.is-active {
         display: flex;
     }
-    .header__actions { display: none; }
-    .header__mobile-btn { display: inline-flex; width: 100%; }
+
+    .header__actions {
+        display: none;
+    }
+
+    .header__mobile-btn {
+        display: inline-flex;
+        width: 100%;
+    }
 }
 
 @media (min-width: 768px) {
@@ -280,7 +392,7 @@ img {
     color: var(--clr-primary);
 }
 
-/* Hero Section */
+/* ─── Hero Section ─────────────────────────────────────────────────────── */
 .hero {
     padding: 1.5rem 0 2rem;
     min-height: auto;
@@ -289,6 +401,7 @@ img {
     background-color: var(--clr-bg-alt);
     position: relative;
     overflow: hidden;
+    /* prevents hero visual from causing horizontal scroll */
 }
 
 .hero::before {
@@ -299,7 +412,7 @@ img {
     transform: translateX(-50%);
     width: 100vw;
     height: 100vw;
-    background: radial-gradient(circle, var(--gradient-glow) 0%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(circle, var(--gradient-glow) 0%, rgba(255, 255, 255, 0) 70%);
     z-index: 0;
     pointer-events: none;
 }
@@ -311,12 +424,51 @@ img {
     align-items: center;
     position: relative;
     z-index: 1;
+    /* Prevent child elements from overflowing the container on mobile */
+    min-width: 0;
+    width: 100%;
 }
 
 @media (min-width: 992px) {
     .hero__container {
         grid-template-columns: 1fr 1.2fr;
         align-items: start;
+    }
+}
+
+/* Mobile Hero fixes */
+@media (max-width: 767px) {
+
+    /* HERO SECTION mobile padding — adjust this value for side spacing */
+    .hero>.container {
+        padding: 0 1.25rem;
+    }
+
+    .hero__content {
+        min-width: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* CTA buttons stack nicely and don't overflow */
+    .hero__cta-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    .hero__cta-group .btn {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Visual block doesn't overflow */
+    .hero__visual {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
     }
 }
 
@@ -332,7 +484,7 @@ img {
 }
 
 .hero__title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     letter-spacing: -0.02em;
     margin-bottom: 0.75rem;
     line-height: 1.2;
@@ -391,7 +543,7 @@ img {
 .hero-preview-card {
     background: var(--clr-bg);
     border-radius: var(--border-radius-lg);
-    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     border: 1px solid var(--clr-border);
     overflow: hidden;
     position: relative;
@@ -449,6 +601,7 @@ img {
         gap: 0.5rem 1rem;
         margin-top: 1rem;
     }
+
     .hero__features-horizontal--left {
         justify-content: flex-start;
         flex-wrap: wrap;
@@ -465,7 +618,7 @@ img {
 }
 
 .hero-preview-card:hover {
-    box-shadow: 0 45px 70px -15px rgba(0,0,0,0.35);
+    box-shadow: 0 45px 70px -15px rgba(0, 0, 0, 0.35);
 }
 
 @media (min-width: 992px) {
@@ -488,9 +641,18 @@ img {
     height: 12px;
     border-radius: 50%;
 }
-.hpc-dot--red { background: #ef4444; }
-.hpc-dot--yellow { background: #f59e0b; }
-.hpc-dot--green { background: #10b981; }
+
+.hpc-dot--red {
+    background: #ef4444;
+}
+
+.hpc-dot--yellow {
+    background: #f59e0b;
+}
+
+.hpc-dot--green {
+    background: #10b981;
+}
 
 .hpc-url {
     margin-left: 1rem;
@@ -519,7 +681,7 @@ img {
 .hpc-badge {
     display: inline-block;
     padding: 0.35rem 1.25rem;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     color: #e2e8f0;
     border-radius: 99px;
     font-size: 0.875rem;
@@ -574,7 +736,7 @@ img {
 .hpc-btn--secondary {
     background: transparent;
     color: white;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Social Proof */
@@ -654,12 +816,35 @@ img {
     margin-bottom: 1.5rem;
 }
 
-.benefit-card__icon--blue { background: #e0f2fe; color: #0284c7; }
-.benefit-card__icon--purple { background: #f3e8ff; color: #9333ea; }
-.benefit-card__icon--orange { background: #ffedd5; color: #ea580c; }
-.benefit-card__icon--teal { background: #ccfbf1; color: #0d9488; }
-.benefit-card__icon--pink { background: #fce7f3; color: #db2777; }
-.benefit-card__icon--green { background: #dcfce7; color: #16a34a; }
+.benefit-card__icon--blue {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.benefit-card__icon--purple {
+    background: #f3e8ff;
+    color: #9333ea;
+}
+
+.benefit-card__icon--orange {
+    background: #ffedd5;
+    color: #ea580c;
+}
+
+.benefit-card__icon--teal {
+    background: #ccfbf1;
+    color: #0d9488;
+}
+
+.benefit-card__icon--pink {
+    background: #fce7f3;
+    color: #db2777;
+}
+
+.benefit-card__icon--green {
+    background: #dcfce7;
+    color: #16a34a;
+}
 
 .benefit-card__title {
     font-size: 1.25rem;
@@ -1070,10 +1255,27 @@ img {
 }
 
 @media (max-width: 767px) {
-    .final-cta__title { font-size: 2.25rem; line-height: 1.2; }
-    .use-cases .section-title { margin-bottom: 2.5rem; max-width: 320px; margin-left: auto; margin-right: auto; line-height: 1.3; }
-    .use-cases__tags { padding: 0 1rem; }
-    .use-case-tag { font-size: 0.875rem; padding: 0.5rem 1rem; }
+    .final-cta__title {
+        font-size: 2.25rem;
+        line-height: 1.2;
+    }
+
+    .use-cases .section-title {
+        margin-bottom: 2.5rem;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.3;
+    }
+
+    .use-cases__tags {
+        padding: 0 1rem;
+    }
+
+    .use-case-tag {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
 }
 
 /* Footer */
@@ -1137,13 +1339,25 @@ img {
     color: var(--clr-primary);
 }
 
-/* Custom Demo Showcase */
+/* ─── View Live Demo / Demo Showcase Section ────────────────────────────── */
 .demo-showcase-wrapper {
     margin-top: 4rem;
     padding: 4rem 3rem;
     background: var(--clr-bg-alt);
     border-radius: var(--border-radius-lg);
     border: 1px solid var(--clr-border);
+}
+
+/* VIEW LIVE DEMO mobile padding — adjust for more breathing room on mobile */
+@media (max-width: 767px) {
+    .demo-showcase-wrapper {
+        /* Remove rounded card style on mobile — let it stretch full width */
+        margin-top: 0;
+        padding: 3rem 1.25rem;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
 }
 
 .demo-cards {
@@ -1154,7 +1368,9 @@ img {
 }
 
 @media (min-width: 768px) {
-    .demo-cards { grid-template-columns: repeat(3, 1fr); }
+    .demo-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .demo-card {
@@ -1187,10 +1403,17 @@ img {
     font-size: 0.9375rem;
 }
 
-/* Testimonials */
+/* ─── Testimonials (Loved by Creators) ─────────────────────────────────── */
 .testimonials {
     padding: 6rem 0;
     background-color: var(--clr-bg);
+}
+
+/* TESTIMONIALS mobile padding — adjust this value for side spacing */
+@media (max-width: 767px) {
+    .testimonials>.container {
+        padding: 0 1.25rem;
+    }
 }
 
 .testimonials__grid {
@@ -1202,7 +1425,9 @@ img {
 }
 
 @media (min-width: 768px) {
-    .testimonials__grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .testimonial-card {
@@ -1211,6 +1436,9 @@ img {
     border-radius: var(--border-radius-lg);
     border: 1px solid var(--clr-border);
     transition: var(--transition);
+    /* Prevent card content from overflowing slider */
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .testimonial-card:hover {
@@ -1239,6 +1467,41 @@ img {
     font-family: var(--font-heading);
 }
 
+/* Testimonials: slider wrapper mobile fix */
+@media (max-width: 767px) {
+
+    /* Make the wrapper handle arrows differently on mobile */
+    .testimonials__wrapper {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+        max-width: 100% !important;
+    }
+
+    /* Slider takes remaining space and clips overflow */
+    .testimonials__slider {
+        flex: 1 1 0% !important;
+        min-width: 0 !important;
+        overflow-x: auto !important;
+    }
+
+    /* Each slide is exactly the slider width — no overflow */
+    .testimonials__slider .testimonial-card {
+        min-width: 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        flex-shrink: 0 !important;
+        padding: 1.75rem 1.5rem !important;
+    }
+
+    /* Arrow buttons — smaller on mobile */
+    .testimonials__wrapper>button {
+        width: 38px !important;
+        height: 38px !important;
+        flex-shrink: 0 !important;
+    }
+}
+
 .tm-badge {
     text-align: center;
     margin-bottom: 3.5rem;
@@ -1250,6 +1513,15 @@ img {
     margin-left: auto;
     margin-right: auto;
     color: var(--clr-text);
+}
+
+@media (max-width: 767px) {
+    .tm-badge {
+        font-size: 0.9375rem;
+        padding: 0.75rem 1rem;
+        border-radius: var(--border-radius);
+        margin-bottom: 2rem;
+    }
 }
 
 .tm-badge strong {
@@ -1281,7 +1553,10 @@ img {
 
 .video-wrapper iframe {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border: none;
 }
 
@@ -1296,13 +1571,13 @@ img {
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     transition: var(--transition);
 }
 
 .video-wrapper:hover .video-placeholder-icon {
     transform: scale(1.1);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
 /* Comparison Section */
@@ -1324,7 +1599,8 @@ img {
     border-collapse: collapse;
 }
 
-.comparison th, .comparison td {
+.comparison th,
+.comparison td {
     padding: 1.25rem 1.5rem;
     text-align: left;
     border-bottom: 1px solid var(--clr-border);
@@ -1347,12 +1623,19 @@ img {
     font-weight: 600;
 }
 
-.td-check, .td-cross {
+.td-check,
+.td-cross {
     font-size: 1.25rem;
     font-weight: bold;
 }
-.td-check { color: #16a34a; }
-.td-cross { color: #ef4444; }
+
+.td-check {
+    color: #16a34a;
+}
+
+.td-cross {
+    color: #ef4444;
+}
 
 @media (max-width: 767px) {
     .table-wrapper {
@@ -1361,28 +1644,32 @@ img {
         background: transparent;
         margin-top: 2rem;
     }
-    .comparison table, 
-    .comparison thead, 
-    .comparison tbody, 
-    .comparison th, 
-    .comparison td, 
-    .comparison tr { 
-        display: block; 
+
+    .comparison table,
+    .comparison thead,
+    .comparison tbody,
+    .comparison th,
+    .comparison td,
+    .comparison tr {
+        display: block;
     }
-    .comparison thead tr { 
-        display: none; 
+
+    .comparison thead tr {
+        display: none;
     }
-    .comparison tr { 
-        border: 1px solid var(--clr-border); 
-        margin-bottom: 1.5rem; 
-        border-radius: var(--border-radius-lg); 
+
+    .comparison tr {
+        border: 1px solid var(--clr-border);
+        margin-bottom: 1.5rem;
+        border-radius: var(--border-radius-lg);
         background: var(--clr-white);
         box-shadow: var(--shadow-sm);
-        overflow: hidden; 
+        overflow: hidden;
     }
-    .comparison td { 
+
+    .comparison td {
         border: none;
-        border-bottom: 1px solid var(--clr-border); 
+        border-bottom: 1px solid var(--clr-border);
         padding: 1.25rem 1rem;
         display: flex;
         justify-content: space-between;
@@ -1392,16 +1679,18 @@ img {
         font-size: 0.875rem;
         gap: 0.5rem;
     }
-    .comparison td:before { 
-        content: attr(data-label); 
+
+    .comparison td:before {
+        content: attr(data-label);
         text-align: left;
         font-size: 0.875rem;
         font-weight: 600;
         color: var(--clr-muted);
         flex-shrink: 0;
     }
+
     /* Mobile Table Header Card Fix */
-    .comparison td:first-child { 
+    .comparison td:first-child {
         display: block;
         background: var(--clr-bg-alt);
         text-align: center;
@@ -1411,13 +1700,16 @@ img {
         font-weight: 700;
         color: var(--clr-heading);
     }
+
     .comparison td:first-child:before {
         display: none;
     }
+
     .comparison td:last-child {
         border-bottom: 0;
         background: rgba(79, 70, 229, 0.05);
     }
+
     .comparison td:last-child:before {
         color: var(--clr-primary);
         font-weight: 700;
@@ -1439,20 +1731,169 @@ img {
     text-align: left;
 }
 
-.guarantee__icon { 
-    font-size: 3rem; 
+.guarantee__icon {
+    font-size: 3rem;
 }
 
-.guarantee__text h4 { 
-    margin-top: 0; 
-    margin-bottom: 0.25rem; 
-    color: #065f46; 
-    font-size: 1.125rem; 
+.guarantee__text h4 {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+    color: #065f46;
+    font-size: 1.125rem;
 }
 
-.guarantee__text p { 
-    margin: 0; 
-    color: #047857; 
-    font-size: 0.875rem; 
+.guarantee__text p {
+    margin: 0;
+    color: #047857;
+    font-size: 0.875rem;
     line-height: 1.4;
+}
+
+/* ==========================================================================
+   MOBILE FIXES — все три задачи
+   ========================================================================== */
+
+/* ─── 1. COMPACT TRUST STRIP — горизонтальный скролл на мобильном ─────────
+   Элементы остаются в одну строку (nowrap), контейнер скроллируется
+   горизонтально. Пользователь свайпает вправо-влево чтобы увидеть всё.
+   ─────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+
+    /* Контейнер: прокрутка включена, полосы скролла скрыты */
+    .compact-trust>.container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .compact-trust>.container::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Внутренний flex-контейнер: не переносить, выравнять по левому краю */
+    .compact-trust>.container>div {
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        gap: 1.75rem !important;
+        /* Правый fade-отступ чтобы видно что есть ещё */
+        padding-right: 1.25rem;
+    }
+
+    /* Каждый пункт: не сжиматься, оставаться в одну строку */
+    .compact-trust>.container>div>div {
+        flex-shrink: 0 !important;
+        white-space: nowrap;
+    }
+}
+
+/* ─── 2. WHAT'S INCLUDED — карточки во всю ширину на мобильном ────────────
+   Вместо авто-подгонки (auto-fit minmax(200px)) делаем одну полную колонку.
+   Карточки перестают сжиматься и выглядят как другие карточки в лендинге.
+   ─────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+
+    /* Сетка карточек: одна колонка на всю ширину */
+    .whats-included>.container>div {
+        grid-template-columns: 1fr !important;
+        padding: 0 !important;
+        gap: 1rem !important;
+    }
+
+    /* Каждая карточка: убираем max-width, растягиваем на 100% */
+    .whats-included>.container>div>div {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* ─── 3. СТАНДАРТИЗАЦИЯ ВЕРТИКАЛЬНЫХ ОТСТУПОВ МЕЖДУ СЕКЦИЯМИ НА МОБИЛЬНОМ ─
+   На десктопе 6rem (96px) смотрится нормально, на мобильном это слишком много.
+   Уменьшаем до 3rem (48px) для всех секций.
+   Это убирает лишний пустой пробел между Comparison и Benefits и всюду.
+   ─────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+
+    /* --- CSS-классы с padding: 6rem 0 --- */
+    .benefits {
+        padding: 3rem 0 !important;
+    }
+
+    .features {
+        padding: 3rem 0 !important;
+    }
+
+    .use-cases {
+        padding: 3rem 0 !important;
+    }
+
+    .steps {
+        padding: 3rem 0 !important;
+    }
+
+    .pricing {
+        padding: 3rem 0 !important;
+    }
+
+    .faq {
+        padding: 3rem 0 !important;
+    }
+
+    .comparison {
+        padding: 3rem 0 !important;
+    }
+
+    .testimonials {
+        padding: 3rem 0 !important;
+    }
+
+    .social-proof {
+        padding: 2.5rem 0 !important;
+    }
+
+    .screenshots {
+        padding: 2.5rem 0 4rem !important;
+    }
+
+    .final-cta {
+        padding: 4rem 0 !important;
+    }
+
+    /* --- Инлайн-стилизованные секции — переопределяем через padding секции --- */
+    /* WHAT YOU GET */
+    .what-you-get {
+        padding: 3rem 0 !important;
+    }
+
+    /* RESULT DRIVEN */
+    .result-driven {
+        padding: 3rem 0 !important;
+    }
+
+    /* CASE STUDIES */
+    .case-studies {
+        padding: 3rem 0 !important;
+    }
+
+    /* VIDEO SHOWCASE */
+    .video-showcase {
+        padding: 3rem 0 !important;
+    }
+
+    /* WHAT'S INCLUDED */
+    .whats-included {
+        padding: 3rem 0 !important;
+    }
+
+    /* SEO TEXT */
+    .seo-text {
+        padding: 2.5rem 0 !important;
+    }
+
+    /* Section header — чуть меньше нижний отступ на мобильном */
+    .section-header {
+        margin: 0 auto 2rem;
+    }
 }

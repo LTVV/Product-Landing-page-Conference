@@ -35,15 +35,23 @@
 
 <body>
 
-    <!-- Top Promo Banner -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: PROMO BANNER
+         Mobile padding: full-bleed (no side padding) — see CSS .promo-banner
+         To change: edit style attribute directly on the .promo-banner div
+         ═══════════════════════════════════════════════════════════════════ -->
     <div class="promo-banner"
-        style="background: var(--clr-primary); color: white; text-align: center; padding: 0.75rem 1rem; font-weight: 500; font-size: 0.9375rem; position: relative; z-index: 100;">
+        style="background: var(--clr-primary); color: white; text-align: center; padding: 0.75rem 1rem; font-weight: 500; font-size: 0.9375rem; position: relative; z-index: 1;">
         🎉 Special Offer: Use code <strong
             style="background: rgba(255,255,255,0.2); padding: 0.1rem 0.4rem; border-radius: 4px; margin: 0 0.25rem;">LAUNCH20</strong>
         for 20% off your purchase! Limited time only.
     </div>
 
-    <!-- Header -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: HEADER (STICKY NAVIGATION)
+         Mobile padding: 1.5rem sides — see CSS .header
+         Sticky: yes — stays at top while scrolling
+         ═══════════════════════════════════════════════════════════════════ -->
     <header class="header">
         <div class="container header__container">
             <a href="#" class="header__logo">
@@ -71,7 +79,11 @@
         </div>
     </header>
 
-    <!-- 1. Hero Section -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: 1. HERO SECTION
+         Mobile padding: 1.25rem sides — see CSS @media (max-width: 767px) .hero > .container
+         To change mobile side padding: edit padding in CSS block "Mobile Hero fixes"
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="hero">
         <div class="container hero__container">
             <div class="hero__content">
@@ -109,7 +121,11 @@
         </div>
     </section>
 
-    <!-- What You Get Section -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: WHAT YOU GET
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .what-you-get > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="what-you-get"
         style="padding: 6rem 0; background: linear-gradient(180deg, var(--clr-bg) 0%, var(--clr-bg-alt) 100%);">
         <div class="container">
@@ -205,7 +221,11 @@
         </div>
     </section>
 
-    <!-- Result-Driven Section -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: RESULT-DRIVEN / LAUNCH WITHOUT DEVELOPERS
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .result-driven > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="result-driven"
         style="padding: 5rem 0; background-color: var(--clr-bg); border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border);">
         <div class="container text-center" style="max-width: 1000px; text-align: center;">
@@ -242,7 +262,11 @@
         </div>
     </section>
 
-    <!-- 2. Social Proof / Trust -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: 2. SOCIAL PROOF / TRUST LOGOS
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .social-proof > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="social-proof">
         <div class="container">
             <p class="social-proof__text" style="font-size: 1.125rem;">Trusted by <strong>1,200+</strong> organizers —
@@ -257,7 +281,11 @@
         </div>
     </section>
 
-    <!-- Case Studies Section -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: CASE STUDIES / MEASURABLE OUTCOMES
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .case-studies > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="case-studies" style="padding: 6rem 0; background-color: var(--clr-bg-alt);">
         <div class="container">
             <div class="section-header">
@@ -335,7 +363,12 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: TESTIMONIALS / LOVED BY CREATORS
+         Mobile padding: 1.25rem sides — see CSS .testimonials > .container in @media block
+         To change mobile side padding: edit in CSS block "TESTIMONIALS mobile padding"
+         Slider mobile fix: see CSS "Testimonials: slider wrapper mobile fix"
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="testimonials">
         <div class="container">
             <div class="section-header">
@@ -452,7 +485,11 @@
         </div>
     </section>
 
-    <!-- 3. Demo Showcase (Redesigned) -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: 3. VIEW LIVE DEMO
+         Mobile: full-width card, padding 1.25rem sides
+         To change mobile padding: edit CSS .demo-showcase-wrapper padding in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="demo-showcase-wrapper" id="demo">
         <div class="container">
             <div class="section-header">
@@ -503,7 +540,11 @@
         </div>
     </section>
 
-    <!-- Comparison Block (SEO & Trust Builder) -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: COMPARISON TABLE
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .comparison > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="comparison">
         <div class="container">
             <div class="section-header">
@@ -554,7 +595,11 @@
         </div>
     </section>
 
-    <!-- 4. Key Benefits -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: 4. KEY BENEFITS
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .benefits > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="benefits" id="benefits">
         <div class="container">
             <div class="section-header">
@@ -632,7 +677,11 @@
         </div>
     </section>
 
-    <!-- 5. Features -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: 5. FEATURES
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .features > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="features" id="features">
         <div class="container">
             <div class="section-header">
@@ -696,7 +745,11 @@
         </div>
     </section>
 
-    <!-- 6. Use Cases -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: 6. USE CASES
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .use-cases > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="use-cases">
         <div class="container">
             <div class="section-header">
@@ -712,7 +765,11 @@
         </div>
     </section>
 
-    <!-- 7. Screenshots Section -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: 7. SCREENSHOTS / MOCKUP SHOWCASE
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .screenshots > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="screenshots">
         <div class="container">
             <div class="section-header">
@@ -761,7 +818,11 @@
         </div>
     </section>
 
-    <!-- Video Showcase -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: VIDEO SHOWCASE
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .video-showcase > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="video-showcase" style="padding: 6rem 0; background: var(--clr-secondary);">
         <div class="container">
             <div class="section-header" style="color: white;">
@@ -798,7 +859,11 @@
         </div>
     </section>
 
-    <!-- 8. How It Works -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: 8. HOW IT WORKS
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .steps > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="steps">
         <div class="container">
             <div class="section-header">
@@ -829,7 +894,11 @@
         </div>
     </section>
 
-    <!-- What's Included Section -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: WHAT'S INCLUDED
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .whats-included > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="whats-included" style="padding: 6rem 0; background: var(--clr-primary); color: white;">
         <div class="container" style="text-align: center;">
             <div class="section-header" style="color: white; margin-bottom: 3rem;">
@@ -896,7 +965,11 @@
         </div>
     </section>
 
-    <!-- Compact Trust Block -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: COMPACT TRUST STRIP
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .compact-trust > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="compact-trust" style="background: var(--clr-secondary); color: white; padding: 2rem 0;">
         <div class="container">
             <div
@@ -911,7 +984,11 @@
         </div>
     </section>
 
-    <!-- 9. Pricing -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: 9. PRICING
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .pricing > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-header">
@@ -992,7 +1069,11 @@
         </div>
     </section>
 
-    <!-- 10. FAQ -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: 10. FAQ
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .faq > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="faq">
         <div class="container faq__container">
             <h2 class="section-title faq__title">Frequently Asked Questions</h2>
@@ -1042,7 +1123,11 @@
         </div>
     </section>
 
-    <!-- SEO Information Section -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: SEO TEXT SECTION
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .seo-text > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="seo-text"
         style="padding: 4rem 0; background-color: var(--clr-bg); border-top: 1px solid var(--clr-border);">
         <div class="container" style="max-width: 800px; color: var(--clr-muted); font-size: 1rem; line-height: 1.8;">
@@ -1078,7 +1163,11 @@
         </div>
     </section>
 
-    <!-- 11. Final CTA -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: 11. FINAL CTA
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .final-cta > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <section class="final-cta">
         <div class="final-cta__glow final-cta__glow--1"></div>
         <div class="final-cta__glow final-cta__glow--2"></div>
@@ -1094,7 +1183,11 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         BLOCK: FOOTER
+         Mobile padding: 1.5rem sides (default .container)
+         To change: add CSS .footer > .container { padding: 0 Xrem; } in @media block
+         ═══════════════════════════════════════════════════════════════════ -->
     <footer class="footer">
         <div class="container footer__container">
             <div class="footer__brand">

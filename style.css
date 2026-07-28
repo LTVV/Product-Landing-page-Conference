@@ -1577,6 +1577,7 @@ img {
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+    aspect-ratio: 16/9;
     background: #0f172a;
     border: 1px solid rgba(255, 255, 255, 0.08);
     cursor: pointer;
@@ -1588,18 +1589,14 @@ img {
     box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.7);
 }
 
-.video-wrapper iframe {
-    width: 100%;
-    aspect-ratio: 16/9;
-    border: none;
-    background: #0f172a;
-    border-radius: var(--border-radius-lg);
-    display: block;
-}
-
+.video-wrapper iframe,
 .video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     border: none;
     background: #0f172a;
     border-radius: var(--border-radius-lg);

@@ -1546,10 +1546,30 @@ img {
 /* Video Block */
 .video-showcase {
     padding: 6rem 0;
-    background-color: var(--clr-bg);
+    background-color: var(--clr-secondary);
+    color: var(--clr-white);
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.video-item {
+    text-align: center;
+}
+
+.video-item__title {
+    color: var(--clr-white);
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    font-family: var(--font-body);
+    font-weight: 500;
 }
 
 .video-wrapper {
+    width: 100%;
     max-width: 900px;
     margin: 0 auto;
     position: relative;
@@ -1557,42 +1577,57 @@ img {
     overflow: hidden;
     box-shadow: var(--shadow-xl);
     aspect-ratio: 16/9;
-    background: linear-gradient(135deg, var(--clr-secondary), #1e293b);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border: 4px solid var(--clr-white);
+    transition: var(--transition);
 }
 
-.video-wrapper iframe {
+.video-wrapper:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border: none;
+    border-radius: var(--border-radius-lg);
 }
 
 .video-placeholder-icon {
-    font-size: 4rem;
-    color: var(--clr-primary);
-    background: var(--clr-white);
-    width: 90px;
-    height: 90px;
+    font-size: 1.5rem;
+    color: var(--clr-white);
+    background: var(--gradient-primary);
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
     transition: var(--transition);
 }
 
 .video-wrapper:hover .video-placeholder-icon {
     transform: scale(1.1);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.6);
+}
+
+.video-placeholder-text {
+    color: var(--clr-white);
+    font-weight: 500;
+    font-size: 1.125rem;
 }
 
 /* Comparison Section */

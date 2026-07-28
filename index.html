@@ -823,25 +823,32 @@
          Mobile padding: 1.5rem sides (default .container)
          To change: add CSS .video-showcase > .container { padding: 0 Xrem; } in @media block
          ═══════════════════════════════════════════════════════════════════ -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+    <section class="video-showcase">
+        <div class="container">
+            <div class="section-header" style="color: white;">
+                <h2 class="section-title" style="color: white;">See how easy it is to customize</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">No coding skills required! Watch how
+                    to magically change content and see what the full preview looks like.</p>
+            </div>
+            <div class="video-grid">
                 <!-- Видео 1 -->
-                <div class="video-item" style="text-align: center;">
-                    <h3 style="color: white; margin-bottom: 1.5rem; font-size: 1.25rem; font-family: var(--font-body); font-weight: 500;">
-                        Video 1: Full website preview (scroll, mobile view)</h3>
-                    <div class="video-wrapper" style="border-radius: var(--border-radius-lg); overflow: hidden; aspect-ratio: 16/9;">
-                        <video src="images/demo_scroll.mp4" controls poster="images/demo_desktop.png" style="width: 100%; height: 100%; object-fit: cover; display: block;"></video>
+                <div class="video-item">
+                    <h3 class="video-item__title">Video 1: Full website preview (scroll, mobile view)</h3>
+                    <div class="video-wrapper">
+                        <video src="images/demo_scroll.mp4" controls poster="images/demo_desktop.png"></video>
                     </div>
                 </div>
 
                 <!-- Видео 2 -->
-                <div class="video-item" style="text-align: center;">
-                    <h3 style="color: white; margin-bottom: 1.5rem; font-size: 1.25rem; font-family: var(--font-body); font-weight: 500;">
-                        Video 2: How to edit content in Elementor</h3>
-                    <div class="video-wrapper" style="border-radius: var(--border-radius-lg); overflow: hidden; aspect-ratio: 16/9;">
-                        <video src="images/demo_scroll.mp4" controls poster="images/demo_desktop.png" style="width: 100%; height: 100%; object-fit: cover; display: block;"></video>
+                <div class="video-item">
+                    <h3 class="video-item__title">Video 2: How to edit content in Elementor</h3>
+                    <div class="video-wrapper">
+                        <video src="images/demo_scroll.mp4" controls poster="images/demo_desktop.png"></video>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
     <!-- ═══════════════════════════════════════════════════════════════════
          BLOCK: 8. HOW IT WORKS

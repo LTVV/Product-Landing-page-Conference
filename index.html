@@ -834,16 +834,24 @@
                 <!-- Видео 1 -->
                 <div class="video-item">
                     <h3 class="video-item__title">Video 1: Full website preview (scroll, mobile view)</h3>
-                    <div class="video-wrapper">
-                        <video src="images/demo_scroll.mp4" controls poster="images/demo_desktop.png"></video>
+                    <div class="video-wrapper" onclick="playShowcaseVideo(this)">
+                        <video src="images/demo_scroll.mp4" poster="images/demo_desktop.png" preload="metadata"></video>
+                        <div class="video-overlay">
+                            <div class="video-placeholder-icon">▶</div>
+                            <p class="video-placeholder-text">Click here to play video</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Видео 2 -->
                 <div class="video-item">
                     <h3 class="video-item__title">Video 2: How to edit content in Elementor</h3>
-                    <div class="video-wrapper">
-                        <video src="images/demo_scroll.mp4" controls poster="images/demo_desktop.png"></video>
+                    <div class="video-wrapper" onclick="playShowcaseVideo(this)">
+                        <video src="images/demo_scroll.mp4" poster="images/demo_desktop.png" preload="metadata"></video>
+                        <div class="video-overlay">
+                            <div class="video-placeholder-icon">▶</div>
+                            <p class="video-placeholder-text">Click here to play video</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1262,6 +1270,15 @@
             const pricingSection = document.getElementById('pricing');
             if (pricingSection) observer.observe(pricingSection);
         });
+
+        function playShowcaseVideo(wrapper) {
+            const video = wrapper.querySelector('video');
+            if (video) {
+                video.controls = true;
+                video.play();
+                wrapper.classList.add('is-playing');
+            }
+        }
     </script>
 </body>
 
